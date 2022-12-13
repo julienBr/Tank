@@ -10,7 +10,7 @@ public class Tank : Base_Controller
     private float maxBullets = 10f;
     private float minBullets;
     private bool isBoosted;
-    public GameObject ammo;
+    [SerializeField] private GameUI ammo;
 
     private void FixedUpdate()
     {
@@ -25,7 +25,7 @@ public class Tank : Base_Controller
                 if (!isAlreadyFiring)
                 {
                     Fire();
-                    ammo.GetComponent<Ammunitions>().LoseAmmo();
+                    ammo.LoseAmmo();
                 }
             }
         }
