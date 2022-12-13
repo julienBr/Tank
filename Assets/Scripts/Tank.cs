@@ -7,12 +7,12 @@ public class Tank : Base_Controller
     [SerializeField] private float speedBoost = 8f;
     [SerializeField] private float speedRotation = 50f;
     [SerializeField] private float boostDuration = 2f;
-    private float maxBullets = 10f;
+    public float maxBullets = 10f;
     private float minBullets;
     private bool isBoosted;
     [SerializeField] private GameUI ammo;
 
-    private void FixedUpdate()
+    private void Update()
     {
         nbBullets = Mathf.Clamp(nbBullets, minBullets, maxBullets);
         transform.Translate(0.0f, 0.0f, Input.GetAxis("Vertical")*speed*Time.deltaTime);
@@ -28,6 +28,10 @@ public class Tank : Base_Controller
                     ammo.LoseAmmo();
                 }
             }
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ammo.Reload();
         }
     }
 

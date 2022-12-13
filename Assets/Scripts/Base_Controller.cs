@@ -36,7 +36,7 @@ public class Base_Controller : MonoBehaviour
     {
         nbBullets--;
         Instantiate(bulletPrefab, bulletSpawnPosition.position, bulletSpawnPosition.rotation);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
         isAlreadyFiring = false;
     }
     

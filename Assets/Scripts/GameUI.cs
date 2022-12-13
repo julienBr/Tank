@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameUI : MonoBehaviour
 {
-    [SerializeField] private GameObject tank;
+    [SerializeField] private Tank tank;
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private float maxHealth = 100f;
     private float minHealth;
@@ -18,8 +18,7 @@ public class GameUI : MonoBehaviour
     
     private void Awake()
     {
-        nbBullets = tank.GetComponent<Tank>().nbBullets;
-        for (int i = 1; i <= nbBullets; i++)
+        for (int i = 1; i <= tank.nbBullets; i++)
         {
             listImage.Add(Instantiate(bulletImage, new Vector3(i * 25f, 25f, 0f), Quaternion.identity, canvas));
         }
@@ -32,14 +31,27 @@ public class GameUI : MonoBehaviour
     
     private void UpdateScore()
     {
-        tank.GetComponent<Tank>().pv = Mathf.Clamp(tank.GetComponent<Tank>().pv, minHealth, maxHealth);
-        scoreText.text = tank.GetComponent<Tank>().pv + " / " + maxHealth;
-        healthBarImage.fillAmount = tank.GetComponent<Tank>().pv / maxHealth;
+        tank.pv = Mathf.Clamp(tank.pv, minHealth, maxHealth);
+        scoreText.text = tank.pv + " / " + maxHealth;
+        healthBarImage.fillAmount = tank.pv / maxHealth;
     }
     
     public void LoseAmmo() 
     {
         Destroy(listImage.Last());
         listImage.RemoveAt(listImage.Count-1);
+    }
+
+    public void Reload()
+    {
+        float remainingBullet = tank.maxBullets - tank.nbBullets;
+        if (remainingBullet > 0)
+        {
+            for (int i = (int)tank.nbBullets+1; i <= tank.maxBullets; i++)
+            {
+                listImage.Add(Instantiate(bulletImage, new Vector3(i * 25f, 25f, 0f), Quaternion.identity, canvas));
+            }
+            tank.nbBullets = tank.maxBullets;
+        }
     }
 }

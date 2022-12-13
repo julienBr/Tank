@@ -1053,8 +1053,6 @@ GameObject:
   - component: {fileID: 837697481}
   - component: {fileID: 837697480}
   - component: {fileID: 837697479}
-  - component: {fileID: 837697483}
-  - component: {fileID: 837697484}
   - component: {fileID: 837697485}
   m_Layer: 5
   m_Name: Canvas
@@ -1146,30 +1144,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &837697483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837697478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aa57f9241d13ec448efa081ff29a913, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &837697484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837697478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb50e1bef8ca4349af11e2a81ebf377, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &837697485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,7 +1156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3440df0ff7a8f4b45a93d0968e711f5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tank: {fileID: 1787827560}
+  tank: {fileID: 1787827567}
   scoreText: {fileID: 1700775481}
   maxHealth: 10
   healthBarImage: {fileID: 1924914617}
@@ -2192,6 +2166,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 429646801708134663, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
   m_PrefabInstance: {fileID: 429646801186793508}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1787827567 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2113069851449576624, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
+  m_PrefabInstance: {fileID: 429646801186793508}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787827560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 837aa425a355b5843b4d1b5a5c23fcee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1815756054 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 429646800725676585, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
