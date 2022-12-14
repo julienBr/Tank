@@ -7,25 +7,21 @@ using TMPro;
 
 public class GameUI : MonoBehaviour
 {
-    [SerializeField]
-    private Tank tank;
-    [SerializeField]
-    private TMP_Text scoreText;
-    [SerializeField]
-    private float maxHealth = 100f;
-    private float minHealth;
-    [SerializeField]
-    private Image healthBarImage;
-    [SerializeField]
-    private GameObject bulletImage;
-    [SerializeField]
-    private Transform canvas;
-    private float nbBullets;
-    public List<GameObject> listImage;
-    public bool isAlreadyReload;
+    [SerializeField] private Tank tank;
+    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private float maxHealth = 10f;
+    [SerializeField] private Image healthBarImage;
+    [SerializeField] private GameObject isBoostedImage;
+    [SerializeField] private GameObject bulletImage;
+    [SerializeField] private Transform canvas;
+                     private float minHealth;
+                     private float nbBullets;
+                     public List<GameObject> listImage;
+                     public bool isAlreadyReload;
     
     private void Awake()
     {
+        isBoostedImage.SetActive(false);
         for (int i = 1; i <= tank.nbBullets; i++)
         {
             listImage.Add(Instantiate(bulletImage, new Vector3(i * 25f, 25f, 0f), Quaternion.identity, canvas));
@@ -35,6 +31,7 @@ public class GameUI : MonoBehaviour
     private void Update()
     {
         UpdateScore();
+        displayBoost();
     }
     
     private void UpdateScore()
@@ -72,5 +69,14 @@ public class GameUI : MonoBehaviour
         }
         tank.nbBullets = tank.maxBullets;
         isAlreadyReload = false;
+    }
+
+    private void displayBoost()
+    {
+        if (tank.isBoosted)
+        {
+            isBoostedImage.SetActive(true);
+        }
+        else isBoostedImage.SetActive(false);
     }
 }

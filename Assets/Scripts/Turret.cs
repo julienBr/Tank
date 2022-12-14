@@ -2,14 +2,10 @@ using UnityEngine;
 
 public class Turret : Base_Controller
 {
-    [SerializeField]
-    private GameObject turretTarget;
-    [SerializeField]
-    private Transform[] traps;
-    [SerializeField]
-    private float detectionRange = 6f;
-    [SerializeField]
-    private float trapRange = 4f;
+    [SerializeField] private GameObject turretTarget;
+    [SerializeField] private Transform[] traps;
+    [SerializeField] private float detectionRange = 6f;
+    [SerializeField] private float trapRange = 4f;
     
     private void Update()
     {

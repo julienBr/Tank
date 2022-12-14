@@ -3,19 +3,20 @@ using UnityEngine;
 
 public class Tank : Base_Controller
 {
-    [SerializeField]
-    private float speed = 5f;
-    [SerializeField]
-    private float speedBoost = 8f;
-    [SerializeField]
-    private float speedRotation = 50f;
-    [SerializeField]
-    private float boostDuration = 2f;
-    [SerializeField]
-    private GameUI ammo;
-    public float maxBullets = 10f;
-    private float minBullets;
-    private bool isBoosted;
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speedBoost = 8f;
+    [SerializeField] private float speedRotation = 50f;
+    [SerializeField] private float boostDuration = 2f;
+    [SerializeField] private GameUI ammo;
+    [SerializeField] private Material mBase;
+    [SerializeField] private Material mHead;
+    [SerializeField] private Material mBaseBoost;
+    [SerializeField] private Material mHeadBoost;
+    [SerializeField] private Renderer tankBase;
+    [SerializeField] private Renderer tankHead;
+                     public float maxBullets = 10f;
+                     private float minBullets;
+                     public bool isBoosted;
 
     private void Update()
     {
@@ -64,10 +65,14 @@ public class Tank : Base_Controller
 
     IEnumerator Boost()
     {
-        float temSpeed = speed;
+        float tmpSpeed = speed;
         speed = speedBoost;
+        tankBase.material = mBaseBoost;
+        tankHead.material = mHeadBoost;
         yield return new WaitForSeconds(boostDuration);
-        speed = temSpeed;
+        tankBase.material = mBase;
+        tankHead.material = mHead;
+        speed = tmpSpeed;
         isBoosted = false;
     }
 }
