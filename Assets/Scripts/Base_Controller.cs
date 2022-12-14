@@ -2,13 +2,19 @@ using System.Collections;
 using UnityEngine;
 
 public class Base_Controller : MonoBehaviour
-{
-    [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] protected Transform bulletSpawnPosition;
-    [SerializeField] private GameObject turretHead;
-    [SerializeField] private Transform _transform;
-    [SerializeField] public float pv = 10f;
-    [SerializeField] public float nbBullets = 10f;
+{ 
+    [SerializeField]
+    private GameObject bulletPrefab;
+    [SerializeField]
+    protected Transform bulletSpawnPosition;
+    [SerializeField]
+    private GameObject turretHead;
+    [SerializeField]
+    private Transform _transform;
+    [SerializeField]
+    public float pv = 10f;
+    [SerializeField]
+    public float nbBullets = 10f;
     protected bool isAlreadyFiring;
 
     protected void UpdatePv()

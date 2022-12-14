@@ -3,14 +3,19 @@ using UnityEngine;
 
 public class Tank : Base_Controller
 {
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float speedBoost = 8f;
-    [SerializeField] private float speedRotation = 50f;
-    [SerializeField] private float boostDuration = 2f;
+    [SerializeField]
+    private float speed = 5f;
+    [SerializeField]
+    private float speedBoost = 8f;
+    [SerializeField]
+    private float speedRotation = 50f;
+    [SerializeField]
+    private float boostDuration = 2f;
+    [SerializeField]
+    private GameUI ammo;
     public float maxBullets = 10f;
     private float minBullets;
     private bool isBoosted;
-    [SerializeField] private GameUI ammo;
 
     private void Update()
     {

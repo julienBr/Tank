@@ -6,13 +6,19 @@ using TMPro;
 
 public class GameUI : MonoBehaviour
 {
-    [SerializeField] private Tank tank;
-    [SerializeField] private TMP_Text scoreText;
-    [SerializeField] private float maxHealth = 100f;
+    [SerializeField]
+    private Tank tank;
+    [SerializeField]
+    private TMP_Text scoreText;
+    [SerializeField]
+    private float maxHealth = 100f;
     private float minHealth;
-    [SerializeField] private Image healthBarImage;
-    [SerializeField] private GameObject bulletImage;
-    [SerializeField] private Transform canvas;
+    [SerializeField]
+    private Image healthBarImage;
+    [SerializeField]
+    private GameObject bulletImage;
+    [SerializeField]
+    private Transform canvas;
     private float nbBullets;
     public List<GameObject> listImage;
     
