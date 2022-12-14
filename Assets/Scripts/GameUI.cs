@@ -68,7 +68,7 @@ public class GameUI : MonoBehaviour
         for (int i = (int)tank.nbBullets+1; i <= tank.maxBullets; i++) 
         {
             listImage.Add(Instantiate(bulletImage, new Vector3(i * 25f, 25f, 0f), Quaternion.identity, canvas));
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
         }
         tank.nbBullets = tank.maxBullets;
         isAlreadyReload = false;
