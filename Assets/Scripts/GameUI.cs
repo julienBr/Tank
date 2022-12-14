@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ public class GameUI : MonoBehaviour
     private Transform canvas;
     private float nbBullets;
     public List<GameObject> listImage;
+    public bool isAlreadyReload;
     
     private void Awake()
     {
@@ -53,11 +55,22 @@ public class GameUI : MonoBehaviour
         float remainingBullet = tank.maxBullets - tank.nbBullets;
         if (remainingBullet > 0)
         {
-            for (int i = (int)tank.nbBullets+1; i <= tank.maxBullets; i++)
+            if (!isAlreadyReload)
             {
-                listImage.Add(Instantiate(bulletImage, new Vector3(i * 25f, 25f, 0f), Quaternion.identity, canvas));
+                isAlreadyReload = true;
+                StartCoroutine(WaitReload());
             }
-            tank.nbBullets = tank.maxBullets;
         }
+    }
+    
+    IEnumerator WaitReload()
+    {
+        for (int i = (int)tank.nbBullets+1; i <= tank.maxBullets; i++) 
+        {
+            listImage.Add(Instantiate(bulletImage, new Vector3(i * 25f, 25f, 0f), Quaternion.identity, canvas));
+            yield return new WaitForSeconds(1f);
+        }
+        tank.nbBullets = tank.maxBullets;
+        isAlreadyReload = false;
     }
 }

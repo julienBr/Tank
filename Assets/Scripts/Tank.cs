@@ -27,7 +27,7 @@ public class Tank : Base_Controller
         {
             if (nbBullets > 0)
             {
-                if (!isAlreadyFiring)
+                if (!isAlreadyFiring && !ammo.isAlreadyReload)
                 {
                     Fire();
                     ammo.LoseAmmo();
