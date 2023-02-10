@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5351626867372143218}
   - component: {fileID: 7899378625281509048}
   - component: {fileID: -3638431187404755178}
-  - component: {fileID: 8127222550805179527}
   - component: {fileID: -4954506869205984067}
+  - component: {fileID: -4337532332260226251}
   m_Layer: 0
   m_Name: PreBullet
   m_TagString: Bullet
@@ -94,28 +94,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8548051385132279661}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.006972236
   m_Height: 0.04133824
   m_Direction: 1
   m_Center: {x: 2.6426958e-17, y: 0.0050715697, z: -6.984921e-10}
---- !u!54 &8127222550805179527
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8548051385132279661}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &-4954506869205984067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,3 +113,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!54 &-4337532332260226251
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8548051385132279661}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

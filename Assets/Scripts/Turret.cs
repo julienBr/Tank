@@ -4,7 +4,7 @@ public class Turret : Base_Controller
 {
     [SerializeField] private GameObject turretTarget;
     [SerializeField] private Transform[] traps;
-    [SerializeField] private float detectionRange = 6f;
+    [SerializeField] private float detectionRange = 20f;
     [SerializeField] private float trapRange = 4f;
     
     private void Update()
@@ -18,11 +18,14 @@ public class Turret : Base_Controller
 
     private bool CheckTargetDistance()
     {
-        if (Physics.Raycast(bulletSpawnPosition.position, bulletSpawnPosition.up, out RaycastHit hit, detectionRange))
+        foreach (Transform spawn in bulletSpawnPosition)
         {
-            if (hit.collider.gameObject.CompareTag("Player"))
+            if (Physics.Raycast(spawn.position, spawn.up, out RaycastHit hit, detectionRange))
             {
-                return true;
+                if (hit.collider.gameObject.CompareTag("PlayerHead"))
+                {
+                    return true;
+                }
             }
         }
         return false;

@@ -4,7 +4,7 @@ using UnityEngine;
 public class Base_Controller : MonoBehaviour
 { 
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] protected Transform bulletSpawnPosition;
+    [SerializeField] protected Transform[] bulletSpawnPosition;
     [SerializeField] private GameObject turretHead;
     [SerializeField] private Transform _transform;
     [SerializeField] public float pv = 10f;
@@ -35,7 +35,7 @@ public class Base_Controller : MonoBehaviour
     private IEnumerator FireDelay()
     {
         nbBullets--;
-        Instantiate(bulletPrefab, bulletSpawnPosition.position, bulletSpawnPosition.rotation);
+        foreach(Transform spawn in bulletSpawnPosition) Instantiate(bulletPrefab, spawn.position, spawn.rotation);
         yield return new WaitForSeconds(0.5f);
         isAlreadyFiring = false;
     }
