@@ -22,9 +22,9 @@ public class GameUI : MonoBehaviour
     private void Awake()
     {
         isBoostedImage.SetActive(false);
-        for (int i = 1; i <= tank.nbBullets; i++)
+        for (int i = 0; i < tank.nbBullets; i++)
         {
-            listImage.Add(Instantiate(bulletImage, new Vector3(i * 25f, 25f, 0f), Quaternion.identity, canvas));
+            listImage.Add(Instantiate(bulletImage, new Vector3(i * 50f, 0f, 0f), Quaternion.identity, canvas));
         }
     }
     
@@ -60,11 +60,11 @@ public class GameUI : MonoBehaviour
         }
     }
     
-    IEnumerator WaitReload()
+    private IEnumerator WaitReload()
     {
-        for (int i = (int)tank.nbBullets+1; i <= tank.maxBullets; i++) 
+        for (int i = (int)tank.nbBullets; i < tank.maxBullets; i++) 
         {
-            listImage.Add(Instantiate(bulletImage, new Vector3(i * 25f, 25f, 0f), Quaternion.identity, canvas));
+            listImage.Add(Instantiate(bulletImage, new Vector3(i * 50f, 0f, 0f), Quaternion.identity, canvas));
             yield return new WaitForSeconds(0.5f);
         }
         tank.nbBullets = tank.maxBullets;

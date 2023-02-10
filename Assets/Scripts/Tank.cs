@@ -8,12 +8,6 @@ public class Tank : Base_Controller
     [SerializeField] private float speedRotation = 50f;
     [SerializeField] private float boostDuration = 2f;
     [SerializeField] private GameUI ammo;
-    [SerializeField] private Material mBase;
-    [SerializeField] private Material mHead;
-    [SerializeField] private Material mBaseBoost;
-    [SerializeField] private Material mHeadBoost;
-    [SerializeField] private Renderer tankBase;
-    [SerializeField] private Renderer tankHead;
                      public float maxBullets = 10f;
                      private float minBullets;
                      public bool isBoosted;
@@ -67,11 +61,7 @@ public class Tank : Base_Controller
     {
         float tmpSpeed = speed;
         speed = speedBoost;
-        tankBase.material = mBaseBoost;
-        tankHead.material = mHeadBoost;
         yield return new WaitForSeconds(boostDuration);
-        tankBase.material = mBase;
-        tankHead.material = mHead;
         speed = tmpSpeed;
         isBoosted = false;
     }
