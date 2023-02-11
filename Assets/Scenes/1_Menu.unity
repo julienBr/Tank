@@ -2117,7 +2117,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 32
+    m_Bits: 2147483647
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2450,6 +2450,14 @@ PrefabInstance:
     - target: {fileID: 3573195736922740448, guid: a93c012dd9ef6454fa7d140e976926f7, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 3372220415
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122386998138085828, guid: a93c012dd9ef6454fa7d140e976926f7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122386998138085828, guid: a93c012dd9ef6454fa7d140e976926f7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a93c012dd9ef6454fa7d140e976926f7, type: 3}
