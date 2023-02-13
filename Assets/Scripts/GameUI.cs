@@ -9,7 +9,7 @@ public class GameUI : MonoBehaviour
 {
     [SerializeField] private Tank tank;
     [SerializeField] private TMP_Text scoreText;
-    [SerializeField] private float maxHealth = 10f;
+    [SerializeField] private float maxHealth;
     [SerializeField] private Image healthBarImage;
     [SerializeField] private GameObject isBoostedImage;
     [SerializeField] private GameObject bulletImage;
@@ -21,6 +21,7 @@ public class GameUI : MonoBehaviour
     
     private void Awake()
     {
+        maxHealth = tank.choice.actualDifficulty.tank.maxHealth;
         isBoostedImage.SetActive(false);
         for (int i = 0; i < tank.nbBullets; i++)
         {

@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxBullets: 20
   nbBullets: 20
-  actualTankNbBullets: 0
+  actualTankNbBullets: 20
   pv: 15
-  actualTankPv: 0
+  actualTankPv: 8
+  maxHealth: 15
   detectionRange: 0
   trapRange: 0
   speed: 5

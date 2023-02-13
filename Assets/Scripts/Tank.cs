@@ -12,11 +12,13 @@ public class Tank : Base_Controller
                      private float minBullets;
                      public bool isBoosted;
 
-    private void Start()
+    private void Awake()
     {
         maxBullets = choice.actualDifficulty.tank.maxBullets;
         nbBullets = choice.actualDifficulty.tank.nbBullets;
         pv = choice.actualDifficulty.tank.pv;
+        Debug.Log(pv);
+
         speed = choice.actualDifficulty.tank.speed;
         speedBoost = choice.actualDifficulty.tank.speedBoost;
     }
