@@ -15,9 +15,9 @@ MonoBehaviour:
   maxBullets: 20
   nbBullets: 20
   actualTankNbBullets: 20
-  pv: 15
-  actualTankPv: 8
-  maxHealth: 15
+  pv: 20
+  actualTankPv: 20
+  maxHealth: 20
   detectionRange: 0
   trapRange: 0
   speed: 5

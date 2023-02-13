@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f44f0fd619a3b489d280a243ceca4f, type: 3}
   m_Name: HardTurret
   m_EditorClassIdentifier: 
-  nbBullets: 0
-  pv: 0
-  detectionRange: 0
-  trapRange: 0
+  maxBullets: 0
+  nbBullets: 9999
+  actualTankNbBullets: 0
+  pv: 15
+  actualTankPv: 0
+  maxHealth: 0
+  detectionRange: 16
+  trapRange: 10
   speed: 0
   speedBoost: 0
-  maxBullets: 0

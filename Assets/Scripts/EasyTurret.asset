@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: EasyTurret
   m_EditorClassIdentifier: 
   maxBullets: 0
-  nbBullets: 40
+  nbBullets: 9999
   actualTankNbBullets: 0
   pv: 5
   actualTankPv: 0
-  detectionRange: 10
-  trapRange: 10
+  maxHealth: 0
+  detectionRange: 8
+  trapRange: 5
   speed: 0
   speedBoost: 0

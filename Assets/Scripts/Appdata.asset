@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6313348dd6a0814f85dded08c052c52, type: 3}
   m_Name: Appdata
   m_EditorClassIdentifier: 
-  actualDifficulty: {fileID: 11400000, guid: bc9f0577628fdc44ca5e3faa8edb367c, type: 2}
+  actualDifficulty: {fileID: 11400000, guid: 5e0e6e6aacf9be844803bf911e7a04de, type: 2}
   difficultyList:
   - {fileID: 11400000, guid: bc9f0577628fdc44ca5e3faa8edb367c, type: 2}
   - {fileID: 11400000, guid: 5e0e6e6aacf9be844803bf911e7a04de, type: 2}

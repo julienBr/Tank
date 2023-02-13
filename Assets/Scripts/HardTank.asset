@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f44f0fd619a3b489d280a243ceca4f, type: 3}
   m_Name: HardTank
   m_EditorClassIdentifier: 
-  nbBullets: 0
-  pv: 0
+  maxBullets: 5
+  nbBullets: 5
+  actualTankNbBullets: 5
+  pv: 5
+  actualTankPv: 5
+  maxHealth: 5
   detectionRange: 0
   trapRange: 0
-  speed: 0
-  speedBoost: 0
-  maxBullets: 0
+  speed: 5
+  speedBoost: 10
