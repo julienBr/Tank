@@ -10,6 +10,7 @@ public class Base_Controller : MonoBehaviour
     [SerializeField] public float pv = 10f;
     [SerializeField] public float nbBullets = 10f;
                      protected bool isAlreadyFiring;
+    [SerializeField] protected AppDatas choice;
 
     protected void UpdatePv()
     {

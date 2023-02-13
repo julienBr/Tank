@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SettingsMenu
+  m_Name: DifficultyMenu
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Open
@@ -99,7 +99,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8fb70f3506a535246be122751945de67, type: 2}
+  m_Motion: {fileID: 7400000, guid: e790e58ca1f1a7d469246f406a820952, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -126,7 +126,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 80ddf32a802416047aba2ba7b4872768, type: 2}
+  m_Motion: {fileID: 7400000, guid: 067dfd8e080b71547aa54417caf3eceb, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

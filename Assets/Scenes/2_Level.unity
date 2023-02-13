@@ -884,6 +884,7 @@ MonoBehaviour:
   _transform: {fileID: 1321626420}
   pv: 5
   nbBullets: 40
+  choice: {fileID: 0}
   turretTarget: {fileID: 1453129390}
   traps: []
   detectionRange: 10
@@ -1794,6 +1795,7 @@ MonoBehaviour:
   _transform: {fileID: 1413727774}
   pv: 5
   nbBullets: 40
+  choice: {fileID: 0}
   turretTarget: {fileID: 1453129390}
   traps: []
   detectionRange: 10
@@ -2085,6 +2087,7 @@ MonoBehaviour:
   _transform: {fileID: 204230573}
   pv: 5
   nbBullets: 40
+  choice: {fileID: 0}
   turretTarget: {fileID: 1453129390}
   traps: []
   detectionRange: 10
@@ -2704,6 +2707,7 @@ MonoBehaviour:
   _transform: {fileID: 244792882}
   pv: 5
   nbBullets: 40
+  choice: {fileID: 0}
   turretTarget: {fileID: 1453129390}
   traps: []
   detectionRange: 10
@@ -8312,6 +8316,7 @@ MonoBehaviour:
   _transform: {fileID: 761713270}
   pv: 10
   nbBullets: 10
+  choice: {fileID: 11400000, guid: 4ec1f2f90c2b385448249f928b6a8ded, type: 2}
   speed: 5
   speedBoost: 10
   speedRotation: 50

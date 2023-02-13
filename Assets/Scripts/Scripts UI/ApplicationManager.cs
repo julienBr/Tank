@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ApplicationManager : MonoBehaviour {
 	
-
+	[SerializeField] private AppDatas choice;
+	
 	public void Quit () 
 	{
 		#if UNITY_EDITOR
@@ -11,5 +12,11 @@ public class ApplicationManager : MonoBehaviour {
 		#else
 		Application.Quit();
 		#endif
+	}
+	
+	public void SelectDifficulty(int choix)
+	{
+		choice.actualDifficulty = choice.difficultyList[choix];
+		SceneManager.LoadScene("2_Level");
 	}
 }

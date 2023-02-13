@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908a420fbba4e8640965306487c0829d, type: 3}
+  m_Name: Easy
+  m_EditorClassIdentifier: 
+  tank: {fileID: 11400000, guid: b4cf93b8daec2be4e9ae047dbe31085c, type: 2}
+  turret: {fileID: 11400000, guid: 6be44590bcea31d44bb92a09b5a9cbf4, type: 2}
