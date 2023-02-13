@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908a420fbba4e8640965306487c0829d, type: 3}
   m_Name: Hard
   m_EditorClassIdentifier: 
+  tank: {fileID: 11400000, guid: 9003111458195a24c9be3f930ed22719, type: 2}
+  turret: {fileID: 11400000, guid: ea084f43f2a0e9b46ab75583b380ce79, type: 2}

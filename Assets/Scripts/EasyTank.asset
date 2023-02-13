@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f44f0fd619a3b489d280a243ceca4f, type: 3}
   m_Name: EasyTank
   m_EditorClassIdentifier: 
-  nbBullets: 0
-  pv: 0
+  maxBullets: 20
+  nbBullets: 20
+  actualTankNbBullets: 0
+  pv: 15
+  actualTankPv: 0
   detectionRange: 0
   trapRange: 0
-  speed: 0
-  speedBoost: 0
-  maxBullets: 0
+  speed: 5
+  speedBoost: 10

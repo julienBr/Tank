@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f44f0fd619a3b489d280a243ceca4f, type: 3}
   m_Name: EasyTurret
   m_EditorClassIdentifier: 
-  nbBullets: 0
-  pv: 0
-  detectionRange: 0
-  trapRange: 0
+  maxBullets: 0
+  nbBullets: 40
+  actualTankNbBullets: 0
+  pv: 5
+  actualTankPv: 0
+  detectionRange: 10
+  trapRange: 10
   speed: 0
   speedBoost: 0
-  maxBullets: 0

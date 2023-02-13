@@ -611,7 +611,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354051087}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: -5}
+  m_LocalPosition: {x: 10, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -882,11 +882,15 @@ MonoBehaviour:
   - {fileID: 1956370651}
   turretHead: {fileID: 260119875}
   _transform: {fileID: 1321626420}
-  pv: 5
+  pv: 10
   nbBullets: 40
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: 4ec1f2f90c2b385448249f928b6a8ded, type: 2}
   turretTarget: {fileID: 1453129390}
-  traps: []
+  traps:
+  - {fileID: 1214159804}
+  - {fileID: 2038757531}
+  - {fileID: 2027916892}
+  - {fileID: 1341031357}
   detectionRange: 10
   trapRange: 4
 --- !u!65 &579096064
@@ -953,7 +957,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &676538119
 Transform:
   m_ObjectHideFlags: 0
@@ -1090,14 +1094,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.95956, y: 0, z: 0, w: 0.2815043}
+  m_LocalRotation: {x: 0.92387956, y: 0, z: 0, w: 0.38268343}
   m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 147.3, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 135, y: 0, z: 0}
 --- !u!1 &729056800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,7 +1127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729056800}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 5}
+  m_LocalPosition: {x: -10, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1418,7 +1422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873777661}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 5}
+  m_LocalPosition: {x: 10, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1793,11 +1797,15 @@ MonoBehaviour:
   - {fileID: 853297281}
   turretHead: {fileID: 73883961}
   _transform: {fileID: 1413727774}
-  pv: 5
+  pv: 10
   nbBullets: 40
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: 4ec1f2f90c2b385448249f928b6a8ded, type: 2}
   turretTarget: {fileID: 1453129390}
-  traps: []
+  traps:
+  - {fileID: 1214159804}
+  - {fileID: 2038757531}
+  - {fileID: 2027916892}
+  - {fileID: 1341031357}
   detectionRange: 10
   trapRange: 4
 --- !u!65 &1148377639
@@ -1837,7 +1845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214159803}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.3, z: 9.8}
+  m_LocalPosition: {x: 0, y: 0.5, z: 19.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1869,7 +1877,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238884498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: -5}
+  m_LocalPosition: {x: -10, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1944,7 +1952,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341031356}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -9.8, y: 0.3, z: 0}
+  m_LocalPosition: {x: -20.25, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2085,11 +2093,15 @@ MonoBehaviour:
   - {fileID: 831293321}
   turretHead: {fileID: 1455967261}
   _transform: {fileID: 204230573}
-  pv: 5
+  pv: 10
   nbBullets: 40
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: 4ec1f2f90c2b385448249f928b6a8ded, type: 2}
   turretTarget: {fileID: 1453129390}
-  traps: []
+  traps:
+  - {fileID: 1214159804}
+  - {fileID: 2038757531}
+  - {fileID: 2027916892}
+  - {fileID: 1341031357}
   detectionRange: 10
   trapRange: 4
 --- !u!65 &1455967265
@@ -2427,7 +2439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1580221501
 Transform:
   m_ObjectHideFlags: 0
@@ -2705,11 +2717,15 @@ MonoBehaviour:
   - {fileID: 576121609}
   turretHead: {fileID: 325858271}
   _transform: {fileID: 244792882}
-  pv: 5
+  pv: 10
   nbBullets: 40
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: 4ec1f2f90c2b385448249f928b6a8ded, type: 2}
   turretTarget: {fileID: 1453129390}
-  traps: []
+  traps:
+  - {fileID: 1214159804}
+  - {fileID: 2038757531}
+  - {fileID: 2027916892}
+  - {fileID: 1341031357}
   detectionRange: 10
   trapRange: 4
 --- !u!65 &1708246960
@@ -3172,7 +3188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027916891}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 9.8, y: 0.3, z: 0}
+  m_LocalPosition: {x: 20.25, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3203,7 +3219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038757530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: -9.8}
+  m_LocalPosition: {x: 0, y: 0.5, z: -19.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8315,14 +8331,14 @@ MonoBehaviour:
   turretHead: {fileID: 1453129390}
   _transform: {fileID: 761713270}
   pv: 10
-  nbBullets: 10
+  nbBullets: 20
   choice: {fileID: 11400000, guid: 4ec1f2f90c2b385448249f928b6a8ded, type: 2}
   speed: 5
   speedBoost: 10
   speedRotation: 50
   boostDuration: 2
   ammo: {fileID: 837697485}
-  maxBullets: 10
+  maxBullets: 20
   isBoosted: 0
 --- !u!54 &2940933503065246988
 Rigidbody:

@@ -1,19 +1,31 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class Tank : Base_Controller
 {
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float speedBoost = 8f;
+    [SerializeField] private float speed;
+    [SerializeField] private float speedBoost;
     [SerializeField] private float speedRotation = 50f;
     [SerializeField] private float boostDuration = 2f;
     [SerializeField] private GameUI ammo;
-                     public float maxBullets = 10f;
+                     public float maxBullets;
                      private float minBullets;
                      public bool isBoosted;
 
+    private void Start()
+    {
+        maxBullets = choice.actualDifficulty.tank.maxBullets;
+        nbBullets = choice.actualDifficulty.tank.nbBullets;
+        pv = choice.actualDifficulty.tank.pv;
+        speed = choice.actualDifficulty.tank.speed;
+        speedBoost = choice.actualDifficulty.tank.speedBoost;
+    }
+
     private void Update()
     {
+        choice.actualDifficulty.tank.actualTankNbBullets = nbBullets;
+        choice.actualDifficulty.tank.actualTankPv = pv;
         nbBullets = Mathf.Clamp(nbBullets, minBullets, maxBullets);
         transform.Translate(0.0f, 0.0f, Input.GetAxis("Vertical")*speed*Time.deltaTime);
         transform.Rotate(0.0f,Input.GetAxis("Horizontal")*speedRotation*Time.deltaTime, 0.0f);
